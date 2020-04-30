@@ -51,11 +51,24 @@ def main():
     max_digits = len(str(max_length))
     length_format = "{length:%dd}" % max_digits
     filler = " " * (max_digits - 1)
-    print(f"                     {filler}A  {filler}B")
+    did_print_header = False
+    same_tables = []
     for tag in common_tags:
         data_A = font_A.reader[tag]
         data_B = font_B.reader[tag]
         if data_A != data_B:
+            if not did_print_header:
+                print(f"                     {filler}A  {filler}B")
+                did_print_header = True
             length_A = length_format.format(length=len(data_A))
             length_B = length_format.format(length=len(data_B))
             print(f"'{tag}' is different  {length_A}  {length_B} bytes")
+        else:
+            same_tables.append(tag)
+    if same_tables:
+        if did_print_header:
+            print()
+        if set(same_tables) == tags_A == tags_B:
+            print("Fonts are identical.")
+        else:
+            print(f"Identical tables: {','.join(same_tables)}")
