@@ -31,8 +31,8 @@ Help text:
 	Compare the binary tables of two OpenType fonts.
 
 	positional arguments:
-	  FONT_A
-	  FONT_B
+	  FONT_A             an OpenType font file
+	  FONT_B             an OpenType font file
 
 	optional arguments:
 	  -h, --help         show this help message and exit

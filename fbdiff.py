@@ -13,9 +13,13 @@ def main():
     parser = argparse.ArgumentParser(description="Compare the binary tables of two OpenType fonts.")
     parser.add_argument('-o', '--table-order', action="store_true",
                         help="show the table tags in sfnt order side-by-side")
-    parser.add_argument('font_A', metavar="FONT_A", type=argparse.FileType("rb"))
-    parser.add_argument('font_B', metavar="FONT_B", type=argparse.FileType("rb"))
+    parser.add_argument('font_A', metavar="FONT_A", type=argparse.FileType("rb"),
+                        help="an OpenType font file")
+    parser.add_argument('font_B', metavar="FONT_B", type=argparse.FileType("rb"),
+                        help="an OpenType font file")
+
     args = parser.parse_args()
+
     font_A = TTFont(args.font_A)
     font_B = TTFont(args.font_B)
     tags_A = set(font_A.reader.keys())
