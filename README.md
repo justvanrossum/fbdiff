@@ -25,7 +25,7 @@ Example usage:
 
 Help text:
 
-	$ fbdiff just$ fbdiff --help
+	$ fbdiff --help
 	usage: fbdiff [-h] [-o] FONT_A FONT_B
 
 	Compare the binary tables of two OpenType fonts.
