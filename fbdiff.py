@@ -86,3 +86,7 @@ def main():
             print("Identical tables:")
             print(textwrap.fill(", ".join(same_tables),
                                 initial_indent="  ", subsequent_indent="  "))
+
+
+if __name__ == "__main__":
+    main()
