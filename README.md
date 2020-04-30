@@ -1,6 +1,10 @@
 # fbdiff
 
-Tool to show a brief summary of table differences in OpenType fonts
+`fbdiff` is a tool to show a brief summary of table differences in
+OpenType fonts. It reports which tables exist in only one of the
+fonts, and it will report which common tables are different and
+which are identical. It only looks at the binary data: tables are
+not parsed.
 
 Example usage:
 
