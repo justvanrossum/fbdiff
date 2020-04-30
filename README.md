@@ -22,3 +22,18 @@ Example usage:
     Identical tables:
       GDEF, GSUB, HVAR, OS/2, TSI0, TSI1, TSI2, TSI3, TSI5, TSIC, VDMX,
       avar, cmap, cvar, cvt , fvar, gasp, gvar, hhea, hmtx, maxp, post
+
+Help text:
+
+	$ fbdiff just$ fbdiff --help
+	usage: fbdiff [-h] [-o] FONT_A FONT_B
+
+	Compare the binary tables of two OpenType fonts.
+
+	positional arguments:
+	  FONT_A
+	  FONT_B
+
+	optional arguments:
+	  -h, --help         show this help message and exit
+	  -o, --table-order  show the table tags in sfnt order side-by-side

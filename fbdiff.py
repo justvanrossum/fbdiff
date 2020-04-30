@@ -10,7 +10,7 @@ def sorted_tags(ttf):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Compare the binary tables of two fonts")
+    parser = argparse.ArgumentParser(description="Compare the binary tables of two OpenType fonts.")
     parser.add_argument('-o', '--table-order', action="store_true",
                         help="show the table tags in sfnt order side-by-side")
     parser.add_argument('font_A', metavar="FONT_A", type=argparse.FileType("rb"))
