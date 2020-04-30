@@ -64,11 +64,12 @@ def main():
         data_B = font_B.reader[tag]
         if data_A != data_B:
             if not did_print_header:
-                print(f"Different tables:    {filler}A  {filler}B")
+                print(f"Different tables:")
+                print(f"        {filler}A  {filler}B")
                 did_print_header = True
             length_A = length_format.format(length=len(data_A))
             length_B = length_format.format(length=len(data_B))
-            print(f"  {tag} is different  {length_A}  {length_B} bytes")
+            print(f"  {tag}  {length_A}  {length_B} bytes")
         else:
             same_tables.append(tag)
     if same_tables:

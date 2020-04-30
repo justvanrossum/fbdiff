@@ -8,15 +8,16 @@ Example usage:
     Tables only in font B:
       meta
 
-    Different tables:        A      B
-      GPOS is different  29628  29574 bytes
-      STAT is different     28    162 bytes
-      fpgm is different   4095   4078 bytes
-      glyf is different  36984  26626 bytes
-      head is different     54     54 bytes
-      loca is different    940    940 bytes
-      name is different   3078   4557 bytes
-      prep is different   1339   1339 bytes
+	Different tables:
+	            A      B
+	  GPOS  29628  29574 bytes
+	  STAT     28    162 bytes
+	  fpgm   4095   4078 bytes
+	  glyf  36984  26626 bytes
+	  head     54     54 bytes
+	  loca    940    940 bytes
+	  name   3078   4557 bytes
+	  prep   1339   1339 bytes
 
     Identical tables:
       GDEF, GSUB, HVAR, OS/2, TSI0, TSI1, TSI2, TSI3, TSI5, TSIC, VDMX,
