@@ -77,6 +77,7 @@ def main():
             print(f"  {tag}  {length_A}  {length_B} bytes")
         else:
             same_tables.append(tag)
+
     if same_tables:
         if did_print_header:
             print()
