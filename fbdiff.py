@@ -1,4 +1,5 @@
 import argparse
+import textwrap
 from fontTools.ttLib import TTFont
 
 
@@ -36,10 +37,15 @@ def main():
         only_in_A = tags_A - tags_B
         only_in_B = tags_B - tags_A
         if only_in_A:
-            print("Tables only in font A:", ",".join(sorted(only_in_A)))
+            print("Tables only in font A:")
+            print(textwrap.fill(", ".join(sorted(only_in_A)),
+                                initial_indent="  ", subsequent_indent="  "))
+            print()
         if only_in_B:
-            print("Tables only in font B:", ",".join(sorted(only_in_B)))
-        print()
+            print("Tables only in font B:")
+            print(textwrap.fill(", ".join(sorted(only_in_B)),
+                                initial_indent="  ", subsequent_indent="  "))
+            print()
 
     common_tags = sorted(tags_A & tags_B)
     max_length = 1
@@ -62,7 +68,7 @@ def main():
                 did_print_header = True
             length_A = length_format.format(length=len(data_A))
             length_B = length_format.format(length=len(data_B))
-            print(f"'{tag}' is different  {length_A}  {length_B} bytes")
+            print(f"  {tag} is different  {length_A}  {length_B} bytes")
         else:
             same_tables.append(tag)
     if same_tables:
@@ -71,4 +77,6 @@ def main():
         if set(same_tables) == tags_A == tags_B:
             print("Fonts are identical.")
         else:
-            print(f"Identical tables: {','.join(same_tables)}")
+            print("Identical tables:")
+            print(textwrap.fill(", ".join(same_tables),
+                                initial_indent="  ", subsequent_indent="  "))
