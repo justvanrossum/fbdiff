@@ -8,7 +8,7 @@ Example usage:
     Tables only in font B:
       meta
 
-                             A      B
+    Different tables:        A      B
       GPOS is different  29628  29574 bytes
       STAT is different     28    162 bytes
       fpgm is different   4095   4078 bytes
