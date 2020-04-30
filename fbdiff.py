@@ -1,4 +1,3 @@
-import sys
 import argparse
 from fontTools.ttLib import TTFont
 
