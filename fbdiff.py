@@ -61,6 +61,7 @@ def main():
     max_digits = len(str(max_length))
     length_format = "{length:%dd}" % max_digits
     filler = " " * (max_digits - 1)
+
     did_print_header = False
     same_tables = []
     for tag in common_tags:
