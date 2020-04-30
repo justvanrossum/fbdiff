@@ -9,4 +9,7 @@ setup(
     entry_points={
         'console_scripts': ['fbdiff=fbdiff:main'],
     },
+    install_requires=[
+        "fonttools",
+    ],
 )
