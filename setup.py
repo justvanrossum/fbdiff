@@ -7,7 +7,7 @@ with open("README.md", "r", encoding="utf-8") as readme:
 
 setup(
     name="fbdiff",
-    version="0.8",
+    use_scm_version=True,
     description="Show a summary of table differences between two OpenType fonts.",
     long_description=long_description,
     author="Just van Rossum",
@@ -15,7 +15,8 @@ setup(
     url="http://github.com/justvanrossum/fbdiff",
     license="Apache License 2.0",
     platforms=["Any"],
-    python_requires=">=3.6",
+    setup_requires=["setuptools_scm"],
+    python_requires=">=3.7",
     py_modules=["fbdiff"],
     entry_points={
         'console_scripts': ['fbdiff=fbdiff:main'],
