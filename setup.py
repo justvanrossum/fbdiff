@@ -1,10 +1,15 @@
 from setuptools import setup
 
 
+with open("README.md", "r", encoding="utf-8") as readme:
+    long_description = readme.read()
+
+
 setup(
     name="fbdiff",
     version="0.8",
     description="Show a summary of table differences between two OpenType fonts.",
+    long_description=long_description,
     author="Just van Rossum",
     author_email="justvanrossum@gmail.com",
     url="http://github.com/justvanrossum/fbdiff",
