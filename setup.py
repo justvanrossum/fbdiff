@@ -15,6 +15,7 @@ setup(
     url="http://github.com/justvanrossum/fbdiff",
     license="Apache License 2.0",
     platforms=["Any"],
+    python_requires=">=3.6",
     py_modules=["fbdiff"],
     entry_points={
         'console_scripts': ['fbdiff=fbdiff:main'],
@@ -22,4 +23,17 @@ setup(
     install_requires=[
         "fonttools",
     ],
+    classifiers=[
+        "Development Status :: 4 - Beta",
+        "Environment :: Console",
+        "Environment :: Other Environment",
+        "Intended Audience :: Developers",
+        "Intended Audience :: End Users/Desktop",
+        "License :: OSI Approved :: Apache Software License",
+        "Natural Language :: English",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3",
+        "Topic :: Text Processing :: Fonts",
+    ]
 )
