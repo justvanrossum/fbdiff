@@ -10,7 +10,7 @@ It only looks at the binary data: tables are not parsed.
 
 Example usage:
 
-.. code:: sh
+.. code::
 
     $ fbdiff fontA.ttf fontB.ttf
     Tables only in font B:
@@ -33,7 +33,7 @@ Example usage:
 
 Help text:
 
-.. code:: sh
+.. code::
 
     $ fbdiff --help
     usage: fbdiff [-h] [-o] FONT_A FONT_B
