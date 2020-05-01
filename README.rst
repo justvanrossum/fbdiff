@@ -1,4 +1,5 @@
-# fbdiff
+fbdiff
+~~~~~~
 
 `fbdiff` is a tool that reports a brief summary of table differences
 in OpenType fonts. It reports which tables exist in only one of the
@@ -8,6 +9,8 @@ are identical.
 It only looks at the binary data: tables are not parsed.
 
 Example usage:
+
+.. code:: sh
 
 	$ fbdiff fontA.ttf fontB.ttf
     Tables only in font B:
@@ -29,6 +32,8 @@ Example usage:
       avar, cmap, cvar, cvt , fvar, gasp, gvar, hhea, hmtx, maxp, post
 
 Help text:
+
+.. code:: sh
 
 	$ fbdiff --help
 	usage: fbdiff [-h] [-o] FONT_A FONT_B
