@@ -54,8 +54,6 @@ def main():
     common_tags = sorted(tags_A & tags_B)
     max_length = 1
     for tag in common_tags:
-        table_A = font_A.reader.tables[tag]
-        table_B = font_B.reader.tables[tag]
         max_length = max(max_length, font_A.reader.tables[tag].length)
         max_length = max(max_length, font_B.reader.tables[tag].length)
     max_digits = len(str(max_length))
